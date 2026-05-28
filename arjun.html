@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Daily Blog</title>
+
+  <link rel="stylesheet" href="arjun.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>My Daily Blog</h1>
+      <p>Write and publish your daily posts</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="post-form">
+      <h2>Create New Post</h2>
+
+      <input type="text" id="title" placeholder="Post Title">
+
+      <textarea id="content" placeholder="Write your post here..."></textarea>
+
+      <button onclick="addPost()">Publish Post</button>
+    </section>
+
+    <section class="posts-section">
+      <h2>Recent Posts</h2>
+
+      <div id="posts"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 My Daily Blog</p>
+  </footer>
+
+  <script src="arjun.js"></script>
+</body>
+</html>
