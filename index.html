@@ -1,45 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Daily Blog</title>
-
-  <link rel="stylesheet" href="arjun.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auzaar — 100+ Online Tools</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="anu.css">
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <h1>My Daily Blog</h1>
-      <p>Write and publish your daily posts</p>
+<div class="pegboard" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">⚒</span>
+    <div class="brand-text">
+      <span class="brand-name">Auzaar</span>
+      <span class="brand-tag">100+ chhote kaam ke औज़ार</span>
     </div>
-  </header>
+  </div>
+  <div class="search-wrap">
+    <input type="text" id="searchInput" class="search-input" placeholder="Tool dhoondho... (jaise: password, BMI, JSON)">
+    <span class="search-count" id="searchCount"></span>
+  </div>
+  <div class="tool-total"><span id="toolTotalNum">0</span> tools</div>
+</header>
 
-  <main class="container">
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Categories">
+    <!-- category buttons injected by JS -->
+  </nav>
 
-    <section class="post-form">
-      <h2>Create New Post</h2>
-
-      <input type="text" id="title" placeholder="Post Title">
-
-      <textarea id="content" placeholder="Write your post here..."></textarea>
-
-      <button onclick="addPost()">Publish Post</button>
+  <main class="main">
+    <section class="category-block" id="toolGrid">
+      <!-- tool cards injected by JS, grouped by category -->
     </section>
-
-    <section class="posts-section">
-      <h2>Recent Posts</h2>
-
-      <div id="posts"></div>
-    </section>
-
   </main>
+</div>
 
-  <footer>
-    <p>© 2026 My Daily Blog</p>
-  </footer>
+<!-- Drawer / tool workspace -->
+<div class="drawer-overlay" id="drawerOverlay">
+  <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+    <div class="drawer-handle"></div>
+    <button class="drawer-close" id="drawerClose" aria-label="Band karein">✕</button>
+    <div class="drawer-head">
+      <span class="drawer-icon" id="drawerIcon">🔧</span>
+      <div>
+        <h2 class="drawer-title" id="drawerTitle">Tool</h2>
+        <span class="drawer-cat" id="drawerCat">Category</span>
+      </div>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <!-- tool UI injected here -->
+    </div>
+  </div>
+</div>
 
-  <script src="arjun.js"></script>
+<footer class="site-footer">
+  <p>Sab kuch aapke browser mein hi chalta hai — koi data kahin bheja nahi jaata.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="anu.js"></script>
 </body>
 </html>
